@@ -1,0 +1,257 @@
+@font-face {
+  font-family: "Public Sans";
+  src: url("../../fonts/PublicSans-Regular.ttf");
+}
+html {
+  font-family: "Public Sans";
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
+html body {
+  margin: 0;
+  padding: 0;
+}
+html body header {
+  position: sticky;
+  background-color: hsl(0, 0%, 100%);
+  top: 0;
+}
+html body header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 60px;
+  padding: 0 20px;
+}
+html body header .header-content .logo {
+  display: flex;
+  align-items: center;
+}
+html body header .header-content .main-nav-wrapper {
+  position: fixed;
+  padding: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 60px;
+  background: linear-gradient(to bottom, hsla(233, 26%, 24%, 0.9), hsla(220, 16%, 96%, 0.87));
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
+}
+html body header .header-content .main-nav-wrapper menu {
+  background-color: hsl(0, 0%, 98%);
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 20px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+html body header .header-content .main-nav-wrapper menu li {
+  list-style: none;
+  text-align: center;
+}
+html body header .header-content .main-nav-wrapper menu li a {
+  text-decoration: none;
+}
+html body header .header-content .request-button {
+  display: none;
+}
+html body .main-section {
+  background: url("../../images/bg-intro-mobile.svg") no-repeat center 50px/contain;
+}
+html body .main-section .main-section-image-mockups-wrapper {
+  height: auto;
+  margin-top: -120px;
+}
+html body .main-section .main-section-image-mockups-wrapper img {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+html body .main-section .main-section-description {
+  padding: 20px 40px;
+}
+html body .main-section .main-section-description h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: hsl(233, 26%, 24%);
+  font-weight: 400;
+}
+html body .main-section .main-section-description p {
+  line-height: 1.5rem;
+  text-align: justify;
+  font-size: 0.8rem;
+  color: hsl(233, 8%, 62%);
+}
+html body .main-section .main-section-description .request-button {
+  margin-top: 10%;
+  width: 45%;
+}
+html body .bank-description {
+  background-color: hsl(220, 16%, 96%);
+  padding: 40px;
+}
+html body .bank-description h2 {
+  font-size: 1.8rem;
+  color: hsl(233, 26%, 24%);
+  text-align: center;
+  font-weight: 300;
+}
+html body .bank-description p {
+  line-height: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: hsl(233, 8%, 62%);
+}
+html body .bank-description .description-items-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+  margin-top: 40px;
+}
+html body .bank-description .description-items-wrapper .description-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 15px;
+}
+html body .bank-description .description-items-wrapper .description-item .description-item-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: auto;
+}
+html body .bank-description .description-items-wrapper .description-item .description-item-title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+html body .bank-description .description-items-wrapper .description-item .description-item-text {
+  line-height: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: hsl(233, 8%, 62%);
+  margin: 0;
+}
+html body .articles-links {
+  background-color: hsl(0, 0%, 98%);
+  padding: 40px 20px;
+}
+html body .articles-links .articles-main-title {
+  font-size: 1.8rem;
+  color: hsl(233, 26%, 24%);
+  text-align: center;
+  font-weight: 300;
+}
+html body .articles-links .article-item {
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: hsl(0, 0%, 100%);
+  margin-top: 25px;
+}
+html body .articles-links .article-item a {
+  display: block;
+  text-decoration: none;
+}
+html body .articles-links .article-item a .article-image {
+  width: 100%;
+  height: auto;
+}
+html body .articles-links .article-item a .article-wrapper {
+  padding: 20px 30px;
+}
+html body .articles-links .article-item a .article-wrapper .article-item-author {
+  display: block;
+  font-size: 0.6rem;
+  color: hsl(233, 8%, 62%) !important;
+}
+html body .articles-links .article-item a .article-wrapper .article-item-title {
+  display: block;
+  color: hsl(233, 26%, 24%) !important;
+  font-size: 300;
+  margin: 10px 0;
+  font-weight: 400;
+}
+html body .articles-links .article-item a .article-wrapper .article-item-content {
+  font-size: 0.75rem;
+  color: hsl(233, 8%, 62%) !important;
+  line-height: 1.1rem;
+}
+html body footer {
+  background-color: hsl(233, 26%, 24%);
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 30px 0;
+}
+html body footer .wrapper {
+  text-align: center;
+  color: white;
+}
+html body footer .wrapper menu {
+  margin: 0;
+  padding: 0;
+}
+html body footer .wrapper menu li {
+  list-style: none;
+}
+html body footer .wrapper menu li a {
+  text-decoration: none;
+  color: white;
+}
+html body footer .wrapper .social-media {
+  margin: 25px auto;
+}
+html body footer .wrapper .social-media li {
+  display: inline-block;
+  margin: 0 10px;
+}
+html body footer .wrapper .main-footer-nav {
+  margin: 10px 0;
+}
+html body footer .wrapper .main-footer-nav menu li {
+  margin: 10px 0;
+}
+html body footer .wrapper .main-footer-nav menu li a {
+  font-size: 0.8rem;
+  color: hsl(220, 16%, 96%);
+}
+html body footer .wrapper .request-button {
+  margin: 30px auto;
+}
+html body footer .wrapper .copyright {
+  color: hsl(233, 8%, 62%);
+  font-size: 0.8rem;
+}
+
+.request-button {
+  background: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  padding: 15px;
+  text-align: center;
+  border-radius: 20px;
+  color: hsl(220, 16%, 96%);
+  border: none;
+  margin: auto;
+  display: block;
+  font-size: 0.8rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.nullVisibility {
+  opacity: 0;
+}
+
+.translateY {
+  transform: translateY(-240px);
+}
+
+/*# sourceMappingURL=styles.css.map */
