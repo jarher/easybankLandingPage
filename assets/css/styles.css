@@ -35,7 +35,7 @@ html body header .header-content .main-nav-wrapper {
   left: 0;
   right: 0;
   top: 60px;
-  background: linear-gradient(to bottom, hsla(233, 26%, 24%, 0.9), hsla(220, 16%, 96%, 0.87));
+  background: linear-gradient(to bottom, hsla(233, 26%, 24%, 0.95), hsla(220, 16%, 96%, 0.4));
   overflow: hidden;
   transition: all 0.2s ease-in-out;
   z-index: 1;
@@ -56,9 +56,23 @@ html body header .header-content .main-nav-wrapper menu {
 html body header .header-content .main-nav-wrapper menu li {
   list-style: none;
   text-align: center;
+  position: relative;
+  cursor: pointer;
 }
 html body header .header-content .main-nav-wrapper menu li a {
   text-decoration: none;
+  color: hsl(233, 8%, 62%);
+}
+html body header .header-content .main-nav-wrapper menu li .indicator {
+  position: absolute;
+  height: 4px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.2s ease-in-out;
+}
+html body header .header-content .menu-icon {
+  cursor: pointer;
 }
 html body header .header-content .request-button {
   display: none;
@@ -69,15 +83,16 @@ html body .main-section {
 html body .main-section .main-section-image-mockups-wrapper {
   height: auto;
   margin-top: -120px;
+  padding: 0 20px;
 }
 html body .main-section .main-section-image-mockups-wrapper img {
-  width: 90%;
+  width: 100%;
   height: auto;
   margin: auto;
   display: block;
 }
 html body .main-section .main-section-description {
-  padding: 20px 40px;
+  padding: 20px 40px 60px;
 }
 html body .main-section .main-section-description h1 {
   font-size: 2rem;
@@ -175,7 +190,7 @@ html body .articles-links .article-item a .article-wrapper .article-item-author 
 html body .articles-links .article-item a .article-wrapper .article-item-title {
   display: block;
   color: hsl(233, 26%, 24%) !important;
-  font-size: 300;
+  font-size: 1rem;
   margin: 10px 0;
   font-weight: 400;
 }
@@ -240,6 +255,11 @@ html body footer .wrapper .copyright {
   margin: auto;
   display: block;
   font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.request-button:hover {
+  background: linear-gradient(90deg, hsl(136, 65%, 70%), hsl(192, 70%, 65%));
 }
 
 .hidden {
@@ -252,6 +272,233 @@ html body footer .wrapper .copyright {
 
 .translateY {
   transform: translateY(-240px);
+}
+
+@media (min-width: 1024px) {
+  html body header {
+    position: relative;
+    padding: 0 13%;
+    overflow: hidden;
+  }
+  html body header .header-content {
+    padding: 0;
+    align-items: normal;
+  }
+  html body header .header-content .main-nav-wrapper {
+    position: relative;
+    background: hsl(0, 0%, 100%);
+    padding: 0;
+    top: 0;
+  }
+  html body header .header-content .main-nav-wrapper .main-nav {
+    height: 100%;
+  }
+  html body header .header-content .main-nav-wrapper .main-nav menu {
+    padding: 0;
+    background: transparent;
+    display: flex;
+    gap: 20px;
+    height: inherit;
+  }
+  html body header .header-content .main-nav-wrapper .main-nav menu li {
+    display: flex;
+    align-items: center;
+  }
+  html body header .header-content .main-nav-wrapper .main-nav menu li a {
+    font-size: 0.7rem;
+    font-weight: 400;
+  }
+  html body header .header-content .main-nav-wrapper .main-nav menu li:hover .indicator {
+    background-color: hsl(136, 65%, 51%);
+  }
+  html body header .header-content .main-nav-wrapper .main-nav menu li:hover a {
+    color: hsl(233, 26%, 24%);
+  }
+  html body header .header-content .menu-icon-wrapper {
+    display: none;
+  }
+  html body header .header-content .header-buttons {
+    display: flex;
+    align-items: center;
+  }
+  html body header .header-content .header-buttons .menu-icon-wrapper {
+    display: none;
+  }
+  html body header .header-content .header-buttons .request-button {
+    display: block;
+  }
+  html body main {
+    overflow: hidden;
+  }
+  html body main .main-section {
+    background: url("../../images/bg-intro-desktop.svg") no-repeat 605px -285px/cover;
+    height: 80vh;
+    display: flex;
+  }
+  html body main .main-section .main-section-image-mockups-wrapper {
+    order: 2;
+    height: auto;
+    margin-top: 0px;
+  }
+  html body main .main-section .main-section-image-mockups-wrapper img {
+    width: 95%;
+    margin-top: -120px;
+    margin-left: 185px;
+  }
+  html body main .main-section .main-section-description {
+    margin: auto auto auto 12%;
+    width: 32%;
+    padding-left: 0;
+  }
+  html body main .main-section .main-section-description h1 {
+    font-size: 2.5rem;
+    text-align: left;
+    margin: 0;
+  }
+  html body main .main-section .main-section-description p {
+    text-align: left;
+    line-height: 1.4rem;
+    font-size: 0.8rem;
+  }
+  html body main .main-section .main-section-description .request-button {
+    margin-left: 0;
+  }
+  html body main .bank-description {
+    background-color: hsl(220, 16%, 96%);
+    padding: 7% 10% 7% 13%;
+  }
+  html body main .bank-description h2 {
+    font-size: 2rem;
+    text-align: left;
+    margin: 0;
+  }
+  html body main .bank-description p {
+    line-height: 1.5rem;
+    text-align: left;
+    font-size: 0.9rem;
+    width: 58%;
+  }
+  html body main .bank-description .description-items-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+  }
+  html body main .bank-description .description-items-wrapper .description-item {
+    grid-column-gap: 30px;
+  }
+  html body main .bank-description .description-items-wrapper .description-item .description-item-image {
+    margin: 0 0 10px 0;
+  }
+  html body main .bank-description .description-items-wrapper .description-item .description-item-title {
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  html body main .bank-description .description-items-wrapper .description-item .description-item-text {
+    line-height: 1.5rem;
+    text-align: left;
+    font-size: 0.8rem;
+    width: 100%;
+  }
+  html body main .articles-links {
+    background-color: hsl(0, 0%, 98%);
+    padding: 5% 13%;
+  }
+  html body main .articles-links .articles-main-title {
+    font-size: 1.8rem;
+    text-align: left;
+  }
+  html body main .articles-links .article-items-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+  }
+  html body main .articles-links .article-items-wrapper .article-item a .article-image {
+    height: 160px;
+  }
+  html body main .articles-links .article-items-wrapper .article-item a .article-wrapper {
+    padding: 20px;
+  }
+  html body main .articles-links .article-items-wrapper .article-item a .article-wrapper .article-item-author {
+    font-size: 0.6rem;
+  }
+  html body main .articles-links .article-items-wrapper .article-item a .article-wrapper .article-item-title {
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+  }
+  html body main .articles-links .article-items-wrapper .article-item a .article-wrapper .article-item-title:hover {
+    color: hsl(136, 65%, 51%) !important;
+  }
+  html body footer {
+    background-color: hsl(233, 26%, 24%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 2fr;
+    padding: 3% 13%;
+  }
+  html body footer .wrapper .social-media {
+    margin: 0;
+  }
+  html body footer .wrapper .social-media li {
+    margin: 0px 5px;
+    width: 17px;
+    height: 17px;
+  }
+  html body footer .wrapper .social-media li path {
+    transition: all 0.2s ease-in-out;
+  }
+  html body footer .wrapper .social-media li:hover path {
+    fill: hsl(136, 65%, 51%);
+  }
+  html body footer .wrapper .main-footer-nav {
+    margin: 0;
+  }
+  html body footer .wrapper .main-footer-nav menu {
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+    flex-wrap: wrap;
+    margin-left: 50px;
+  }
+  html body footer .wrapper .main-footer-nav menu li {
+    text-align: left;
+    margin: 4px 0px;
+    margin-right: 70px;
+  }
+  html body footer .wrapper .main-footer-nav menu li a {
+    font-size: 0.7rem;
+    color: hsl(220, 16%, 96%);
+    transition: all 0.2s ease-in-out;
+  }
+  html body footer .wrapper .main-footer-nav menu li a:hover {
+    color: hsl(136, 65%, 51%) !important;
+  }
+  html body footer .wrapper .request-button {
+    margin-right: 0;
+    margin-top: 0;
+  }
+  html body footer .wrapper .copyright {
+    text-align: right;
+  }
+  html body footer .wrapper:nth-child(1) {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .hidden {
+    display: block;
+  }
+  .nullVisibility {
+    opacity: 1;
+  }
+  .translateY {
+    transform: translateY(0px);
+  }
+  .request-button {
+    padding: 12px 20px;
+    font-size: 0.7rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
